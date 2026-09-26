@@ -1,15 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://optristco.com/en/index.html</loc></url>
-  <url><loc>https://optristco.com/en/about.html</loc></url>
-  <url><loc>https://optristco.com/en/products.html</loc></url>
-  <url><loc>https://optristco.com/en/contact.html</loc></url>
-  <url><loc>https://optristco.com/ar/index.html</loc></url>
-  <url><loc>https://optristco.com/ar/about.html</loc></url>
-  <url><loc>https://optristco.com/ar/products.html</loc></url>
-  <url><loc>https://optristco.com/ar/contact.html</loc></url>
-  <url><loc>https://optristco.com/de/index.html</loc></url>
-  <url><loc>https://optristco.com/de/about.html</loc></url>
-  <url><loc>https://optristco.com/de/products.html</loc></url>
-  <url><loc>https://optristco.com/de/contact.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Root (redirect) -->
+  <url>
+    <loc>https://optristco.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://optristco.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://optristco.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://optristco.com/de/"/>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://optristco.com/en/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://optristco.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://optristco.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://optristco.com/de/"/>
+  </url>
+  <url>
+    <loc>https://optristco.com/en/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://optristco.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://optristco.com/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://optristco.com/de/about.html"/>
+  </url>
+  <url>
+    <loc>https://optristco.com/en/products.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://optristco.com/en/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://optristco.com/ar/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://optristco.com/de/products.html"/>
+  </url>
+  <url>
+    <loc>https://optristco.com/en/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://optristco.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://optristco.com/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://optristco.com/de/contact.html"/>
+  </url>
+
+  <!-- Arabic -->
+  <url>
+    <loc>https://optristco.com/ar/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://optristco.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://optristco.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://optristco.com/de/"/>
+  </url>
+  <url>
+    <loc>https://optristco.com/ar/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://optristco.com/ar/products.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://optristco.com/ar/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://optristco.com/de/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://optristco.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://optristco.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://optristco.com/de/"/>
+  </url>
+  <url>
+    <loc>https://optristco.com/de/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://optristco.com/de/products.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://optristco.com/de/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /blog/
+Disallow: /eg/
+Disallow: /*.DS_Store
+
 Sitemap: https://optristco.com/sitemap.xml
+
+# Optrist Co — optristco.com

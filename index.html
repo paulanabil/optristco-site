@@ -1,24 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optrist Co - Redirecting...</title>
-    <script>
-        const lang = navigator.language || navigator.userLanguage;
-        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        const middleEastTzs = ['Africa/Cairo', 'Asia/Riyadh', 'Asia/Dubai', 'Asia/Baghdad', 'Asia/Kuwait', 'Asia/Qatar', 'Asia/Bahrain', 'Asia/Aden', 'Africa/Tripoli', 'Africa/Tunis', 'Africa/Algiers'];
-        
-        if (middleEastTzs.includes(tz) || lang.startsWith('ar')) {
-            window.location.href = '/ar/index.html';
-        } else if (lang.startsWith('de')) {
-            window.location.href = '/de/index.html';
-        } else {
-            window.location.href = '/en/index.html';
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optrist Co | Deutz Engine Spare Parts Specialist</title>
+  <meta name="description" content="Optrist Co — Deutz diesel engine spare parts specialist with German quality standards. Serving the Middle East since 2002.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://optristco.com/en/">
+  <link rel="alternate" hreflang="en" href="https://optristco.com/en/">
+  <link rel="alternate" hreflang="ar" href="https://optristco.com/ar/">
+  <link rel="alternate" hreflang="de" href="https://optristco.com/de/">
+  <link rel="alternate" hreflang="x-default" href="https://optristco.com/en/">
+  <meta property="og:title" content="Optrist Co | Deutz Engine Spare Parts">
+  <meta property="og:description" content="Deutz diesel engine spare parts with German quality standards. Serving the Middle East since 2002.">
+  <meta property="og:image" content="https://optristco.com/images/optristlogowithoutouterglow.png">
+  <meta property="og:url" content="https://optristco.com/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#39c095">
+  <link rel="icon" href="favicon.png">
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Optrist Co",
+    "url":"https://optristco.com",
+    "logo":"https://optristco.com/images/optristlogo.PNG",
+    "description":"Deutz diesel engine spare parts specialist. German quality standards. Serving the Middle East since 2002.",
+    "address":{"@type":"PostalAddress","streetAddress":"12 Salama Hegazy St","addressLocality":"Mansoura","addressCountry":"EG"},
+    "email":"optristco@icloud.com",
+    "telephone":"+201006131346",
+    "foundingDate":"2002",
+    "sameAs":["https://facebook.com/optristco","https://instagram.com/optristco"]
+  }</script>
+  <style>
+    body { margin:0; background:#0a0f0d; display:flex; align-items:center; justify-content:center; min-height:100vh; font-family:sans-serif; }
+    .loader { text-align:center; color:#39c095; }
+    .loader svg { animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .loader p { font-size:0.9rem; color:#a0a8a4; margin-top:1rem; }
+  </style>
 </head>
 <body>
-    <p>Redirecting to your language...</p>
+  <div class="loader">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="#39c095">
+      <path d="M19.14,12.94c.04-.3.06-.61.06-.94s-.02-.64-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94L14.4,2.81c-.04-.24-.24-.41-.48-.41h-3.84c-.24,0-.43.17-.47.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-.22-.08-.47,0-.59.22L2.73,8.87c-.12.22-.07.49.12.61l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s.02.64.06.94l-2.03,1.58c-.18.14-.23.41-.12.61l1.92,3.32c.12.22.37.29.59.22l2.39-.96c.5.38,1.03.7,1.62.94l.36,2.54c.05.24.24.41.48.41h3.84c.24,0,.44-.17.47-.41l.36-2.54c.59-.24,1.13-.56,1.62-.94l2.39.96c.22.08.47,0,.59-.22l1.92-3.32c.12-.22.07-.49-.12-.61L19.14,12.94zM12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+    </svg>
+    <p>Detecting your language…</p>
+  </div>
+  <script>
+    (function() {
+      // Middle East timezones → Arabic
+      var middleEastTZ = [
+        'Africa/Cairo','Africa/Tripoli','Africa/Tunis','Africa/Algiers',
+        'Asia/Riyadh','Asia/Dubai','Asia/Baghdad','Asia/Kuwait',
+        'Asia/Qatar','Asia/Bahrain','Asia/Aden','Asia/Muscat',
+        'Asia/Amman','Asia/Beirut','Asia/Damascus','Asia/Jerusalem',
+        'Asia/Gaza','Asia/Hebron','Africa/Khartoum','Africa/Djibouti'
+      ];
+
+      var tz = '';
+      try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch(e) {}
+
+      // German language browser → German
+      var lang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      lang = lang.toLowerCase();
+
+      if (middleEastTZ.indexOf(tz) !== -1) {
+        window.location.replace('./ar/');
+      } else if (lang.startsWith('de') || lang.startsWith('de-')) {
+        window.location.replace('./de/');
+      } else {
+        window.location.replace('./en/');
+      }
+    })();
+  </script>
+  <!-- Fallback if JS disabled -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=./en/">
+  </noscript>
 </body>
 </html>

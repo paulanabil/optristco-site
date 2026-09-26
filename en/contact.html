@@ -1,68 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Optrist Co</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Optrist Co - Get a Quote Today</title>
+  <meta name="description" content="Contact Optrist Co for Deutz diesel engine spare parts. Send an inquiry or chat on WhatsApp. We typically respond within 2-4 business hours.">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">
-            <img src="../images/optristlogo.PNG" alt="Optrist Co Logo">
-            <span>Optrist Co</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="lang-switch">
-            <a href="../en/contact.html" title="English">🇬🇧</a>
-            <a href="../ar/contact.html" title="Arabic">🇦🇪</a>
-            <a href="../de/contact.html" title="German">🇩🇪</a>
-        </div>
-    </nav>
 
-    <section class="hero" style="height: 50vh;">
-        <div class="hero-content">
-            <h1 class="glowing-text">Contact Us</h1>
-            <p>Get in touch with our expert team.</p>
-        </div>
-    </section>
+<nav class="navbar" role="navigation">
+  <a href="index.html" class="nav-brand"><img src="../images/optristlogo.PNG" alt="Optrist Co Logo" width="38" height="38"><span>Optrist Co</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="lang-switch">
+    <a href="../en/" title="English" class="active-lang">🇬🇧</a>
+    <a href="../ar/" title="العربية">🇦🇪</a>
+    <a href="../de/" title="Deutsch">🇩🇪</a>
+  </div>
+  <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mobile-nav"><button class="close-btn">✕</button>
+  <a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About Us</a><a href="contact.html" class="active">Contact</a>
+  <div class="lang-switch"><a href="../en/">🇬🇧</a><a href="../ar/">🇦🇪</a><a href="../de/">🇩🇪</a></div>
+</nav>
 
-    <section>
-        <div class="grid-2">
-            <div class="glass-card">
-                <h3>Send us a Message</h3>
-                <form action="mailto:optristco@icloud.com" method="POST" enctype="text/plain" style="display: flex; flex-direction: column; gap: 1rem;">
-                    <input type="text" name="Name" placeholder="Your Name" required style="padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid var(--primary-green); color: white; border-radius: 4px;">
-                    <input type="email" name="Email" placeholder="Your Email" required style="padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid var(--primary-green); color: white; border-radius: 4px;">
-                    <input type="text" name="EngineModel" placeholder="Engine Model (e.g. F4L912)" style="padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid var(--primary-green); color: white; border-radius: 4px;">
-                    <textarea name="Message" placeholder="Your Message / Part Numbers" rows="5" required style="padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid var(--primary-green); color: white; border-radius: 4px;"></textarea>
-                    <button type="submit" class="btn btn-primary" style="cursor: none;">Send Message</button>
-                </form>
+<main>
+  <header class="page-hero fade-up">
+    <div class="section-inner">
+      <h1>Contact Optrist Co</h1>
+    </div>
+  </header>
+
+  <section class="section-inner fade-up" style="margin-top: 4rem;">
+    <div class="contact-grid grid-2">
+      <div class="contact-form-wrap glass-card fade-up">
+        <h3 style="margin-bottom: 1.5rem;">Send Inquiry</h3>
+        <form id="contact-form">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="name" style="display:block; margin-bottom: 0.5rem;">Name *</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; border-radius: 4px; border: 1px solid var(--border, #444); background: var(--dark, #0a0f0d); color: #fff;">
+          </div>
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="email" style="display:block; margin-bottom: 0.5rem;">Email *</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border-radius: 4px; border: 1px solid var(--border, #444); background: var(--dark, #0a0f0d); color: #fff;">
+          </div>
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="phone" style="display:block; margin-bottom: 0.5rem;">Phone</label>
+            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 0.8rem; border-radius: 4px; border: 1px solid var(--border, #444); background: var(--dark, #0a0f0d); color: #fff;">
+          </div>
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="engine" style="display:block; margin-bottom: 0.5rem;">Engine Model</label>
+            <input type="text" id="engine" name="engine" placeholder="e.g. F4L912, BF6M" style="width: 100%; padding: 0.8rem; border-radius: 4px; border: 1px solid var(--border, #444); background: var(--dark, #0a0f0d); color: #fff;">
+          </div>
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="message" style="display:block; margin-bottom: 0.5rem;">Message *</label>
+            <textarea id="message" name="message" required rows="5" style="width: 100%; padding: 0.8rem; border-radius: 4px; border: 1px solid var(--border, #444); background: var(--dark, #0a0f0d); color: #fff;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+          <p style="margin-top: 1rem; font-size: 0.85rem; color: #aaa; text-align: center;">We typically respond within 2-4 business hours</p>
+        </form>
+      </div>
+
+      <div class="contact-info-wrap fade-up">
+        <a href="https://wa.me/201006131346" target="_blank" class="whatsapp-chat-card glass-card" style="display: block; text-decoration: none; margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="card-icon" style="color: #25D366;">💬</div>
+            <div>
+              <h3 style="color: #fff; margin-bottom: 0.25rem;">Chat on WhatsApp</h3>
+              <p style="color: #ccc; margin: 0; font-size: 0.9rem;">Fastest response — chat with our team directly</p>
             </div>
-            
-            <div style="display: flex; flex-direction: column; gap: 2rem;">
-                <div class="glass-card">
-                    <h3>Contact Information</h3>
-                    <p><strong>Headquarters:</strong> 12 Salama Hegazy St, Mansoura, Egypt</p>
-                    <p><strong>Email:</strong> <a href="mailto:optristco@icloud.com">optristco@icloud.com</a></p>
-                    <p><strong>Phone / WhatsApp:</strong> +201006131346</p>
-                    <a href="https://wa.me/201006131346" class="btn" style="margin-top: 1rem; display: inline-block;">Chat on WhatsApp</a>
-                </div>
+          </div>
+        </a>
+
+        <div class="contact-info-card glass-card" style="margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="card-icon">✉️</div>
+            <div>
+              <h3 style="margin-bottom: 0.25rem;">Email Us</h3>
+              <a href="mailto:optristco@icloud.com" style="color: var(--green, #39c095); text-decoration: none;">optristco@icloud.com</a>
             </div>
+          </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Optrist Co. All Rights Reserved.</p>
+        <div class="contact-info-card glass-card" style="margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="card-icon">📍</div>
+            <div>
+              <h3 style="margin-bottom: 0.25rem;">Location</h3>
+              <p style="margin: 0; color: #ccc;">12 Salama Hegazy St, Mansoura, Egypt</p>
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="../js/main.js"></script>
+        <div class="contact-info-card glass-card">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="card-icon">🕒</div>
+            <div>
+              <h3 style="margin-bottom: 0.25rem;">Business Hours</h3>
+              <p style="margin: 0; color: #ccc;">Sun–Thu: 9:00 AM – 5:00 PM (EET)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="map-section fade-up" style="margin-top:3rem; border-radius:12px; overflow:hidden; border:1px solid var(--border, #333);">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55015.14!2d31.3660!3d31.0364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79db1bf3c0001%3A0x4c8a4c7e4f3b!2sMansoura%2C%20Dakahlia%2C%20Egypt!5e0!3m2!1sen!2seg!4v1" width="100%" height="350" style="border:0; filter:grayscale(50%) hue-rotate(120deg) brightness(0.7);" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section class="section-inner fade-up" style="margin-top: 5rem; margin-bottom: 4rem;">
+    <h2 class="section-title" style="text-align: center;">Why Contact Us?</h2>
+    <div class="grid-3" style="margin-top: 2rem;">
+      <div class="glass-card text-center">
+        <h3>Fast Response</h3>
+        <p>We value your time and reply to all inquiries within hours.</p>
+      </div>
+      <div class="glass-card text-center">
+        <h3>Expert Advice</h3>
+        <p>Benefit from our 20+ years of Deutz engine expertise.</p>
+      </div>
+      <div class="glass-card text-center">
+        <h3>No Obligation</h3>
+        <p>Get free quotes and professional advice with no pressure to buy.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="section-inner">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-wrap"><img src="../images/optristlogo.PNG" alt="Optrist Co" width="36"><span>Optrist Co</span></div>
+      <p>Deutz diesel engine spare parts specialist. German quality standards. Middle East trusted since 2002.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/optristco" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://instagram.com/optristco" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="var(--dark2)"/></svg></a>
+        <a href="mailto:optristco@icloud.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Products</h4><a href="products.html">Engine Filters</a><a href="products.html">Gaskets &amp; Seals</a><a href="products.html">Pistons &amp; Cylinders</a><a href="products.html">Fuel Systems</a><a href="products.html">Cooling Systems</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="mailto:optristco@icloud.com">optristco@icloud.com</a><a href="https://wa.me/201006131346" target="_blank">WhatsApp Chat</a><a href="contact.html">Send Inquiry</a><p style="color:#9aaba4;font-size:0.85rem;margin-top:0.5rem;">12 Salama Hegazy St,<br>Mansoura, Egypt</p></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Optrist Co. All Rights Reserved.</p><p><a href="../en/">English</a> · <a href="../ar/">العربية</a> · <a href="../de/">Deutsch</a></p></div>
+</div></footer>
+<a href="https://wa.me/201006131346" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+
 </body>
 </html>
