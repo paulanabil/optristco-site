@@ -1,6 +1,7 @@
 /**
  * Optrist Co — 3D Interactive WebGL Globe
  * Mathematical 3D Spherical Coordinate mapping for exact country placement
+ * Photorealistic NASA Blue Marble Earth Texture + Specular Water Reflections + Atmospheric Cloud Drift
  * Built with Three.js
  */
 
@@ -16,58 +17,58 @@
   const LOCATIONS = [
     {
       id: 'egypt',
-      name: docLang === 'ar' ? 'مصر (المقر الرئيسي)' : docLang === 'de' ? 'Ägypten (Hauptsitz)' : 'Egypt (Global HQ)',
-      desc: docLang === 'ar' ? 'المنصورة والمستودع المركزي للتوزيع' : docLang === 'de' ? 'Mansoura · Zentrallager & Distribution' : 'Mansoura · Central Warehouse & Distribution',
+      name: docLang === 'ar' ? 'مصر' : docLang === 'de' ? 'Ägypten' : 'Egypt',
+      desc: docLang === 'ar' ? 'المنصورة والمستودع المركزي للتوزيع وخدمة الشرق الأوسط' : docLang === 'de' ? 'Mansoura · Zentrallager & regionale Distribution' : 'Mansoura · Central Warehouse & Regional Distribution Hub',
       flag: '🇪🇬',
       lat: 30.5,
       lng: 31.3,
       isHQ: true,
-      color: 0x10b981 // Bright emerald
+      color: 0x00ff88 // Bright vibrant neon emerald
     },
     {
       id: 'uae',
       name: docLang === 'ar' ? 'الإمارات (دبي)' : docLang === 'de' ? 'VAE (Dubai)' : 'UAE (Dubai)',
-      desc: docLang === 'ar' ? 'المحطة اللوجستية لإعادة التصدير والخليج' : docLang === 'de' ? 'Nahost Logistikdrehscheibe' : 'Middle East Logistics & Re-export Hub',
+      desc: docLang === 'ar' ? 'المحطة اللوجستية لإعادة التصدير والخليج العربي' : docLang === 'de' ? 'Nahost Logistikdrehscheibe & Re-Export' : 'Middle East Logistics & Re-export Hub',
       flag: '🇦🇪',
       lat: 25.2,
       lng: 55.3,
-      color: 0x059669
+      color: 0x10b981
     },
     {
       id: 'germany',
       name: docLang === 'ar' ? 'ألمانيا' : docLang === 'de' ? 'Deutschland' : 'Germany',
-      desc: docLang === 'ar' ? 'المعايير الهندسية الألمانية والرقابة الفنية' : docLang === 'de' ? 'Ingenieurstandards & Qualität' : 'Engineering Standards & Technical Specs',
+      desc: docLang === 'ar' ? 'المعايير الهندسية الألمانية والرقابة الفنية الصارمة' : docLang === 'de' ? 'Ingenieurstandards & strenge Qualitätskontrolle' : 'Engineering Standards & Technical Specifications',
       flag: '🇩🇪',
       lat: 51.16,
       lng: 10.45,
-      color: 0x059669
+      color: 0x10b981
     },
     {
       id: 'italy',
       name: docLang === 'ar' ? 'إيطاليا' : docLang === 'de' ? 'Italien' : 'Italy',
-      desc: docLang === 'ar' ? 'شركاء تصنيع المكونات الدقيقة' : docLang === 'de' ? 'Präzisions-Fertigungspartner' : 'Precision Engineering Partners',
+      desc: docLang === 'ar' ? 'شركاء تصنيع المكونات الميكانيكية الدقيقة' : docLang === 'de' ? 'Präzisions-Fertigungspartner für Motorteile' : 'Precision Engineering & Component Partners',
       flag: '🇮🇹',
       lat: 41.9,
       lng: 12.56,
-      color: 0x059669
+      color: 0x10b981
     },
     {
       id: 'india',
       name: docLang === 'ar' ? 'الهند' : docLang === 'de' ? 'Indien' : 'India',
-      desc: docLang === 'ar' ? 'شراكات صناعية ومسبوكات عالية التحمل' : docLang === 'de' ? 'Schwerlast-Fertigungspartner' : 'Heavy-Duty Manufacturing Partners',
+      desc: docLang === 'ar' ? 'شراكات صناعية ومسبوكات هندسية عالية التحمل' : docLang === 'de' ? 'Schwerlast-Fertigungspartner & Gusskomponenten' : 'Heavy-Duty Manufacturing & Casting Partners',
       flag: '🇮🇳',
       lat: 28.61,
       lng: 77.2,
-      color: 0x059669
+      color: 0x10b981
     },
     {
       id: 'china',
       name: docLang === 'ar' ? 'الصين' : docLang === 'de' ? 'China' : 'China',
-      desc: docLang === 'ar' ? 'طاقات إنتاجية ضخمة وفق المعايير العالمية' : docLang === 'de' ? 'High-Capacity Produktionspartner' : 'High-Capacity Production Facilities',
+      desc: docLang === 'ar' ? 'طاقات إنتاجية ضخمة ومتطورة وفق المعايير الدولية' : docLang === 'de' ? 'High-Capacity Produktionspartner nach Weltstandards' : 'High-Capacity Production Facilities to Global Specs',
       flag: '🇨🇳',
       lat: 31.23,
       lng: 121.47,
-      color: 0x059669
+      color: 0x10b981
     }
   ];
 
@@ -77,12 +78,13 @@
   const height = container.clientHeight || 520;
 
   const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-  camera.position.z = 240;
+  camera.position.z = 230;
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(width, height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.15;
   container.innerHTML = '';
   container.appendChild(renderer.domElement);
 
@@ -102,56 +104,60 @@
     return new THREE.Vector3(x, y, z);
   }
 
-  // Load natural earth texture
+  // Load NASA photorealistic earth textures
   const textureLoader = new THREE.TextureLoader();
-  const texturePath = '../images/earth-texture.png';
+  const earthTexture = textureLoader.load('../images/earth_atmos_2048.jpg');
+  const specularTexture = textureLoader.load('../images/earth_specular_2048.jpg');
+  const cloudsTexture = textureLoader.load('../images/earth_clouds_1024.png');
 
-  textureLoader.load(texturePath, function (texture) {
-    texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
-    
-    // Core Globe Sphere
-    const sphereGeometry = new THREE.SphereGeometry(GLOBE_RADIUS, 64, 64);
-    const sphereMaterial = new THREE.MeshPhongMaterial({
-      map: texture,
-      color: 0xffffff,
-      specular: 0x10b981,
-      shininess: 8,
-      transparent: false
-    });
-    const globeMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
-    globeGroup.add(globeMesh);
+  earthTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
-    // Subtle outer atmosphere glow shell
-    const atmosphereGeom = new THREE.SphereGeometry(GLOBE_RADIUS * 1.018, 48, 48);
-    const atmosphereMat = new THREE.MeshBasicMaterial({
-      color: 0x34d399,
-      transparent: true,
-      opacity: 0.12,
-      side: THREE.BackSide
-    });
-    const atmosphereMesh = new THREE.Mesh(atmosphereGeom, atmosphereMat);
-    globeGroup.add(atmosphereMesh);
-
-    buildMarkersAndArcs();
-  }, undefined, function () {
-    // Graceful fallback if texture fails to load
-    const fallbackGeom = new THREE.SphereGeometry(GLOBE_RADIUS, 32, 32);
-    const fallbackMat = new THREE.MeshBasicMaterial({ color: 0xecfdf5, wireframe: true });
-    globeGroup.add(new THREE.Mesh(fallbackGeom, fallbackMat));
-    buildMarkersAndArcs();
+  // Core Globe Sphere with Photorealistic Surface & Ocean Specular Reflections
+  const sphereGeometry = new THREE.SphereGeometry(GLOBE_RADIUS, 64, 64);
+  const sphereMaterial = new THREE.MeshPhongMaterial({
+    map: earthTexture,
+    specularMap: specularTexture,
+    specular: new THREE.Color(0x38bdf8), // Natural blue ocean specular reflection
+    shininess: 25,
+    color: 0xffffff
   });
+  const globeMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
+  globeGroup.add(globeMesh);
 
-  // Lighting
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.85);
+  // Realistic Cloud Layer hovering just above Earth surface
+  const cloudsGeometry = new THREE.SphereGeometry(GLOBE_RADIUS * 1.012, 64, 64);
+  const cloudsMaterial = new THREE.MeshPhongMaterial({
+    map: cloudsTexture,
+    transparent: true,
+    opacity: 0.38,
+    blending: THREE.NormalBlending,
+    depthWrite: false
+  });
+  const cloudsMesh = new THREE.Mesh(cloudsGeometry, cloudsMaterial);
+  globeGroup.add(cloudsMesh);
+
+  // Subtle luminous atmospheric edge rim
+  const atmosphereGeom = new THREE.SphereGeometry(GLOBE_RADIUS * 1.026, 48, 48);
+  const atmosphereMat = new THREE.MeshBasicMaterial({
+    color: 0x38bdf8,
+    transparent: true,
+    opacity: 0.14,
+    side: THREE.BackSide
+  });
+  const atmosphereMesh = new THREE.Mesh(atmosphereGeom, atmosphereMat);
+  globeGroup.add(atmosphereMesh);
+
+  // Vivid Lighting for realistic Earth rendering
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.05);
   scene.add(ambientLight);
 
-  const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.6);
-  dirLight1.position.set(150, 100, 150);
-  scene.add(dirLight1);
+  const sunLight = new THREE.DirectionalLight(0xffffff, 1.25);
+  sunLight.position.set(160, 110, 160);
+  scene.add(sunLight);
 
-  const dirLight2 = new THREE.DirectionalLight(0xd1fae5, 0.4);
-  dirLight2.position.set(-150, -50, -100);
-  scene.add(dirLight2);
+  const fillLight = new THREE.DirectionalLight(0xe0f2fe, 0.45);
+  fillLight.position.set(-160, -40, -100);
+  scene.add(fillLight);
 
   // Markers, Pulses and 3D Bezier Connecting Arcs
   const markerMeshes = [];
@@ -163,35 +169,42 @@
       const pos = latLngToVector3(loc.lat, loc.lng, GLOBE_RADIUS);
       if (loc.isHQ) hqVector = pos;
 
-      // 3D Pin Beacon
-      const pinGeom = new THREE.SphereGeometry(loc.isHQ ? 2.4 : 1.7, 16, 16);
+      // 3D Pin Beacon (Bright, Glowing)
+      const pinGeom = new THREE.SphereGeometry(loc.isHQ ? 2.6 : 1.9, 16, 16);
       const pinMat = new THREE.MeshBasicMaterial({
-        color: loc.isHQ ? 0x059669 : 0x10b981
+        color: loc.isHQ ? 0x00ff88 : 0x10b981
       });
       const pinMesh = new THREE.Mesh(pinGeom, pinMat);
-      pinMesh.position.copy(pos);
+      pinMesh.position.copy(pos.clone().multiplyScalar(1.015));
       pinMesh.userData = loc;
       globeGroup.add(pinMesh);
       markerMeshes.push(pinMesh);
 
-      // Pulsing Ring on the surface
-      const ringGeom = new THREE.RingGeometry(1.5, 3.2, 32);
+      // Inner Bright Core
+      const coreGeom = new THREE.SphereGeometry(loc.isHQ ? 1.4 : 1.0, 12, 12);
+      const coreMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      const coreMesh = new THREE.Mesh(coreGeom, coreMat);
+      coreMesh.position.copy(pos.clone().multiplyScalar(1.02));
+      globeGroup.add(coreMesh);
+
+      // Pulsing Ring on the surface (Bright Emerald)
+      const ringGeom = new THREE.RingGeometry(1.4, 3.4, 32);
       const ringMat = new THREE.MeshBasicMaterial({
-        color: 0x10b981,
+        color: 0x00ff88,
         transparent: true,
-        opacity: 0.7,
+        opacity: 0.85,
         side: THREE.DoubleSide
       });
       const ringMesh = new THREE.Mesh(ringGeom, ringMat);
-      ringMesh.position.copy(pos.clone().multiplyScalar(1.008));
+      ringMesh.position.copy(pos.clone().multiplyScalar(1.018));
       ringMesh.lookAt(pos.clone().multiplyScalar(2));
       globeGroup.add(ringMesh);
       markerMeshes.push({ mesh: ringMesh, isPulse: true });
 
-      // Star spike / stem for HQ
+      // Stem for Egypt Distribution Hub
       if (loc.isHQ) {
-        const stemGeom = new THREE.CylinderGeometry(0.4, 0.4, 4, 8);
-        const stemMat = new THREE.MeshBasicMaterial({ color: 0x047857 });
+        const stemGeom = new THREE.CylinderGeometry(0.4, 0.4, 4.5, 8);
+        const stemMat = new THREE.MeshBasicMaterial({ color: 0x00ff88 });
         const stem = new THREE.Mesh(stemGeom, stemMat);
         stem.position.copy(pos.clone().multiplyScalar(1.025));
         stem.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), pos.clone().normalize());
@@ -199,7 +212,7 @@
       }
     });
 
-    // Create 3D Curved Great-Circle Arcs from Egypt HQ to all international partners
+    // Create 3D Curved Great-Circle Arcs from Egypt Central Hub to international partners
     if (hqVector) {
       LOCATIONS.filter(l => !l.isHQ).forEach(loc => {
         const destVector = latLngToVector3(loc.lat, loc.lng, GLOBE_RADIUS);
@@ -216,22 +229,22 @@
     mid.normalize().multiplyScalar(altitude);
 
     const curve = new THREE.QuadraticBezierCurve3(v1, mid, v2);
-    const points = curve.getPoints(48);
+    const points = curve.getPoints(50);
 
-    // Glowing arc line
+    // Bright glowing arc line
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
     const material = new THREE.LineBasicMaterial({
-      color: 0x10b981,
+      color: 0x00ff88,
       transparent: true,
-      opacity: 0.55,
+      opacity: 0.72,
       linewidth: 2
     });
     const arc = new THREE.Line(geometry, material);
     globeGroup.add(arc);
 
     // Flying light pulse along the arc
-    const pulseGeom = new THREE.SphereGeometry(1.0, 12, 12);
-    const pulseMat = new THREE.MeshBasicMaterial({ color: 0x34d399 });
+    const pulseGeom = new THREE.SphereGeometry(1.2, 12, 12);
+    const pulseMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
     const pulseSphere = new THREE.Mesh(pulseGeom, pulseMat);
     globeGroup.add(pulseSphere);
 
@@ -242,7 +255,9 @@
     });
   }
 
-  // Pre-rotate globe so Egypt and Middle East / Europe face the user on initial load
+  buildMarkersAndArcs();
+
+  // Pre-rotate globe so Egypt, Middle East, and Europe face the user on initial load
   // Egypt is at lng ~31.3° E, lat ~30.5° N
   globeGroup.rotation.y = -0.55;
   globeGroup.rotation.x = 0.32;
@@ -387,18 +402,23 @@
       targetRotationY += 0.0016;
     }
 
+    // Gentle independent cloud drift
+    if (cloudsMesh) {
+      cloudsMesh.rotation.y += 0.0004;
+    }
+
     // Pulse animation for marker rings
     markerMeshes.forEach(item => {
       if (item.isPulse && item.mesh) {
-        const s = 1.0 + Math.sin(pulseClock * 2.5) * 0.35;
+        const s = 1.0 + Math.sin(pulseClock * 2.8) * 0.38;
         item.mesh.scale.set(s, s, s);
-        item.mesh.material.opacity = 0.8 - (s - 0.7) * 0.6;
+        item.mesh.material.opacity = 0.9 - (s - 0.7) * 0.6;
       }
     });
 
     // Flight pulse animation along arcs
     arcMeshes.forEach(arc => {
-      arc.progress = (arc.progress + 0.007) % 1.0;
+      arc.progress = (arc.progress + 0.008) % 1.0;
       const point = arc.curve.getPointAt(arc.progress);
       arc.pulse.position.copy(point);
     });
