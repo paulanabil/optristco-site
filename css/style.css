@@ -271,6 +271,7 @@ section {
 .lang-switch {
   display: flex;
   align-items: center;
+  direction: ltr;
   gap: 0.4rem;
   background: var(--bg-slate);
   padding: 0.3rem 0.6rem;
@@ -313,6 +314,58 @@ section {
   border-radius: 2px;
   transition: var(--transition-apple);
 }
+
+/* Mobile Navigation Drawer */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 10000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.mobile-nav .close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+html[dir="rtl"] .mobile-nav .close-btn {
+  right: auto;
+  left: 1.5rem;
+}
+
+.mobile-nav a {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color var(--transition-apple);
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  color: var(--primary-green);
+}
+
 
 /* ── BUTTONS ── */
 .btn {
@@ -873,7 +926,125 @@ textarea.form-control {
   color: var(--text-muted);
 }
 
-/* ── FLOATING LIVE CHAT WIDGET ── */
+/* ── FLOATING WHATSAPP BUTTON ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: all var(--transition-apple);
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+  background: #20ba5a;
+}
+
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+}
+
+.whatsapp-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.6);
+  animation: waPulse 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes waPulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 0; }
+  100% { transform: scale(0.95); opacity: 0; }
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 72px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: all var(--transition-apple);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+html[lang="ar"] .whatsapp-float,
+html[dir="rtl"] .whatsapp-float {
+  right: auto;
+  left: 28px;
+}
+
+html[lang="ar"] .whatsapp-tooltip,
+html[dir="rtl"] .whatsapp-tooltip {
+  right: auto;
+  left: 72px;
+  transform: translateX(-8px);
+}
+
+html[lang="ar"] .whatsapp-float:hover .whatsapp-tooltip,
+html[dir="rtl"] .whatsapp-float:hover .whatsapp-tooltip {
+  transform: translateX(0);
+}
+
+/* Contact Form Feedback Banner */
+.contact-feedback-box {
+  background: #ecfdf5;
+  border: 1px solid #10b981;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.contact-feedback-box h4 {
+  color: #065f46;
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.contact-feedback-box p {
+  color: #047857;
+  font-size: 0.92rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.contact-feedback-box .btn-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Legacy Live Chat Widget (Retained for backwards compatibility) */
 .chat-launcher {
   position: fixed;
   bottom: 28px;

@@ -31,9 +31,9 @@
 
       <div class="nav-actions">
         <div class="lang-switch">
+          <a href="../de/about.html" title="Deutsch" class="active-lang">🇩🇪</a>
           <a href="../en/about.html" title="English">🇬🇧</a>
           <a href="../ar/about.html" title="العربية">🇦🇪</a>
-          <a href="../de/about.html" title="Deutsch" class="active-lang">🇩🇪</a>
         </div>
         <a href="contact.html" class="btn btn-primary btn-sm">Angebot anfordern</a>
         <button class="hamburger" aria-label="Menü öffnen">
@@ -50,11 +50,6 @@
     <a href="products.html">Produkte</a>
     <a href="about.html" class="active">Über uns</a>
     <a href="contact.html">Kontakt</a>
-    <div class="lang-switch" style="margin-top: 1rem;">
-      <a href="../en/about.html">🇬🇧 English</a>
-      <a href="../ar/about.html">🇦🇪 العربية</a>
-      <a href="../de/about.html" class="active-lang">🇩🇪 Deutsch</a>
-    </div>
   </div>
 
   <!-- ── PAGE HERO ── -->
@@ -105,7 +100,7 @@
         </div>
 
         <div style="background: #ffffff; border: 1px solid var(--border-hairline); border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: var(--shadow-card); text-align: center;">
-          <img src="../images/DeutzF4l912-1.png" alt="Deutz F4L912 Motor" style="max-height: 320px; margin: 0 auto; object-fit: contain;">
+          <img src="../images/DeutzF4l912-1.png" alt="Deutz Dieselmotor — Optrist Co" style="max-height: 320px; margin: 0 auto; object-fit: contain;">
           <h4 style="margin-top: 1.5rem; font-size: 1.2rem;">Deutz Konstruktionsmaßstab</h4>
           <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.3rem;">
             Jede Kurbelwelle, Zylinderlaufbuchse und Einspritzkomponente wird nach genauen technischen Zeichnungen kalibriert.
@@ -166,7 +161,7 @@
       </p>
       <div class="btn-group">
         <a href="contact.html" class="btn btn-primary">Zur Kontaktseite</a>
-        <button class="btn btn-secondary" onclick="document.getElementById('chat-launcher').click()">Live-Chat öffnen</button>
+        <a href="https://wa.me/201223161181?text=Hallo%20Optrist%20Co,%20ich%20habe%20eine%20Anfrage%20zu%20Deutz-Ersatzteilen." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">WhatsApp-Chat (+201223161181)</a>
       </div>
     </div>
   </section>
@@ -185,6 +180,7 @@
           </p>
           <div style="font-size: 0.88rem; color: #64748b;">
             ✉️ E-Mail: <a href="mailto:optristco@icloud.com" style="color: #0f172a; font-weight: 600;">optristco@icloud.com</a><br>
+            💬 WhatsApp: <a href="https://wa.me/201223161181" style="color: #0f172a; font-weight: 600;">+20 122 316 1181</a><br>
             📍 12 Salama Hegazy Str., Mansoura, Ägypten
           </div>
         </div>
@@ -223,44 +219,16 @@
     </div>
   </footer>
 
-  <!-- ── FLOATING LIVE CHAT ── -->
-  <button id="chat-launcher" class="chat-launcher" aria-label="Support-Chat öffnen">
-    <span class="chat-badge-pulse"></span>
-    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
-  </button>
-
-  <div id="chat-popup" class="chat-popup" role="dialog" aria-modal="true">
-    <div class="chat-header">
-      <div class="title-wrap">
-        <img src="../images/optristlogo.PNG" class="agent-avatar" alt="Optrist Co">
-        <div>
-          <h4>Optrist Co Technischer Support</h4>
-          <span>Aktiv · Schnelle Antwort per E-Mail</span>
-        </div>
-      </div>
-      <button id="chat-close" class="chat-close-btn">&times;</button>
-    </div>
-
-    <div class="chat-body">
-      <div class="chat-bubble-greeting">
-        👋 <strong>Willkommen bei Optrist Co!</strong><br>
-        Bitte hinterlassen Sie Ihre Kontaktdaten und Teileanfrage. Unser technisches Team meldet sich umgehend bei Ihnen.
-      </div>
-
-      <div id="chat-status" style="display:none; margin-bottom: 0.8rem; font-size: 0.85rem;"></div>
-
-      <form id="chat-inquiry-form" class="chat-form">
-        <input type="text" name="chat_name" placeholder="Ihr Name / Firma" required>
-        <input type="text" name="chat_contact" placeholder="E-Mail oder Telefonnummer" required>
-        <input type="text" name="chat_engine" placeholder="Deutz Motormodell (z.B. F4L912, BF6M)">
-        <textarea name="chat_message" placeholder="Welche Ersatzteile benötigen Sie? Bitte Teilenummer oder Beschreibung angeben..." required></textarea>
-        <button type="submit" class="btn-submit-chat">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          Anfrage an optristco@icloud.com senden
-        </button>
-      </form>
-    </div>
-  </div>
+  <!-- ── FLOATING WHATSAPP BUTTON ── -->
+  <a href="https://wa.me/201223161181?text=Hallo%20Optrist%20Co,%20ich%20habe%20eine%20Anfrage%20zu%20Deutz-Ersatzteilen." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="WhatsApp-Chat +201223161181">
+    <span class="whatsapp-tooltip">WhatsApp: +201223161181</span>
+    <span class="whatsapp-pulse"></span>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
   <script src="../js/main.js"></script>
 </body>
