@@ -1,1 +1,26 @@
-<script>window.location.replace("en/contact.html");</script><meta http-equiv="refresh" content="0;url=en/contact.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to Contact | Optrist Co</title>
+  <script>
+    (function() {
+      var middleEastTZ = ['Africa/Cairo','Africa/Tripoli','Africa/Tunis','Africa/Algiers','Asia/Riyadh','Asia/Dubai','Asia/Baghdad','Asia/Kuwait','Asia/Qatar','Asia/Bahrain','Asia/Aden','Asia/Muscat','Asia/Amman','Asia/Beirut','Asia/Damascus','Asia/Jerusalem','Asia/Gaza','Asia/Hebron','Africa/Khartoum'];
+      var tz = '';
+      try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch(e) {}
+      var lang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      lang = lang.toLowerCase();
+      if (middleEastTZ.indexOf(tz) !== -1 || lang.startsWith('ar')) {
+        window.location.replace('./ar/contact.html');
+      } else if (lang.startsWith('de')) {
+        window.location.replace('./de/contact.html');
+      } else {
+        window.location.replace('./en/contact.html');
+      }
+    })();
+  </script>
+  <meta http-equiv="refresh" content="0; url=./en/contact.html">
+</head>
+<body>
+</body>
+</html>

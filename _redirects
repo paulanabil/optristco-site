@@ -1,0 +1,14 @@
+# Netlify redirects file
+/About.html         /en/about.html    301
+/Contact.html       /en/contact.html  301
+/Home.html          /en/index.html    301
+/Optrist-Co.html    /en/index.html    301
+/about              /en/about.html    301
+/contact            /en/contact.html  301
+/products           /en/products.html 301
+/en/About.html      /en/about.html    301
+/en/Contact.html    /en/contact.html  301
+/ar/About.html      /ar/about.html    301
+/ar/Contact.html    /ar/contact.html  301
+/de/About.html      /de/about.html    301
+/de/Contact.html    /de/contact.html  301

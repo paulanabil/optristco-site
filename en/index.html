@@ -331,88 +331,55 @@
 
       <!-- Real SVG Map Wrapper with Accurate Geography -->
       <div class="map-wrap">
-        <svg viewBox="0 0 1000 500" class="world-map-svg" xmlns="http://www.w3.org/2000/svg" aria-label="Authentic Natural Earth World Map">
-          <!-- The realistic land path generated directly from Natural Earth GeoJSON -->
-          <use href="../images/world-map.svg#land-layer"/>
-          <!-- Inline fallback if external SVG reference not rendered -->
-          <image href="../images/world-map.svg" width="1000" height="500" />
-        </svg>
+        <div class="map-inner">
+          <svg viewBox="0 0 1000 500" class="world-map-svg" xmlns="http://www.w3.org/2000/svg" aria-label="Authentic Natural Earth World Map">
+            <!-- The realistic land path generated directly from Natural Earth GeoJSON -->
+            <use href="../images/world-map.svg#land-layer"/>
+            <!-- Inline fallback if external SVG reference not rendered -->
+            <image href="../images/world-map.svg" width="1000" height="500" />
+          </svg>
 
-        <!-- Precise Cartographic Pins -->
-        <!-- Egypt: HQ -->
-        <div class="map-pin-marker marker-egypt" title="Mansoura, Egypt (HQ)">
-          <div class="pin-pulse"></div>
-          <div class="pin-core"></div>
-          <div class="pin-tooltip">🏢 Egypt HQ &amp; Central Distribution</div>
-        </div>
-
-        <!-- Dubai UAE -->
-        <div class="map-pin-marker marker-dubai" title="Dubai, UAE">
-          <div class="pin-pulse"></div>
-          <div class="pin-core"></div>
-          <div class="pin-tooltip">🇦🇪 Dubai — Middle East Logistics</div>
-        </div>
-
-        <!-- Germany -->
-        <div class="map-pin-marker marker-germany" title="Germany">
-          <div class="pin-pulse"></div>
-          <div class="pin-core"></div>
-          <div class="pin-tooltip">🇩🇪 Germany — Engineering Standards</div>
-        </div>
-
-        <!-- Italy -->
-        <div class="map-pin-marker marker-italy" title="Italy">
-          <div class="pin-pulse"></div>
-          <div class="pin-core"></div>
-          <div class="pin-tooltip">🇮🇹 Italy — Precision Partner</div>
-        </div>
-
-        <!-- India -->
-        <div class="map-pin-marker marker-india" title="India">
-          <div class="pin-pulse"></div>
-          <div class="pin-core"></div>
-          <div class="pin-tooltip">🇮🇳 India — Manufacturing Partner</div>
-        </div>
-
-        <!-- China -->
-        <div class="map-pin-marker marker-china" title="China">
-          <div class="pin-pulse"></div>
-          <div class="pin-core"></div>
-          <div class="pin-tooltip">🇨🇳 China — High-Capacity Production</div>
-        </div>
-      </div>
-
-      <!-- Active Market Badges (Inspired by Export Website Template) -->
-      <div class="market-badge-grid">
-        <div class="market-badge-card">
-          <span class="market-flag">🇪🇬</span>
-          <div class="market-info">
-            <h5>Egypt (Headquarters)</h5>
-            <span>Mansoura &amp; Alexandria Ports · Central Warehouse</span>
+          <!-- Precise Cartographic Pins -->
+          <!-- Egypt: HQ -->
+          <div class="map-pin-marker marker-egypt" title="Mansoura, Egypt (HQ)">
+            <div class="pin-pulse"></div>
+            <div class="pin-core"></div>
+            <div class="pin-tooltip">🏢 Egypt HQ &amp; Central Distribution</div>
           </div>
-        </div>
 
-        <div class="market-badge-card">
-          <span class="market-flag">🇸🇦</span>
-          <div class="market-info">
-            <h5>Saudi Arabia</h5>
-            <span>Jeddah &amp; Dammam · Industrial &amp; Agricultural Supply</span>
+          <!-- Dubai UAE -->
+          <div class="map-pin-marker marker-dubai" title="Dubai, UAE">
+            <div class="pin-pulse"></div>
+            <div class="pin-core"></div>
+            <div class="pin-tooltip">🇦🇪 Dubai — Middle East Logistics</div>
           </div>
-        </div>
 
-        <div class="market-badge-card">
-          <span class="market-flag">🇦🇪</span>
-          <div class="market-info">
-            <h5>United Arab Emirates</h5>
-            <span>Jebel Ali Port · Re-export &amp; Regional Distribution</span>
+          <!-- Germany -->
+          <div class="map-pin-marker marker-germany" title="Germany">
+            <div class="pin-pulse"></div>
+            <div class="pin-core"></div>
+            <div class="pin-tooltip">🇩🇪 Germany — Engineering Standards</div>
           </div>
-        </div>
 
-        <div class="market-badge-card">
-          <span class="market-flag">🇱🇾</span>
-          <div class="market-info">
-            <h5>Libya</h5>
-            <span>Tripoli &amp; Benghazi · Diesel Power Generations</span>
+          <!-- Italy -->
+          <div class="map-pin-marker marker-italy" title="Italy">
+            <div class="pin-pulse"></div>
+            <div class="pin-core"></div>
+            <div class="pin-tooltip">🇮🇹 Italy — Precision Partner</div>
+          </div>
+
+          <!-- India -->
+          <div class="map-pin-marker marker-india" title="India">
+            <div class="pin-pulse"></div>
+            <div class="pin-core"></div>
+            <div class="pin-tooltip">🇮🇳 India — Manufacturing Partner</div>
+          </div>
+
+          <!-- China -->
+          <div class="map-pin-marker marker-china" title="China">
+            <div class="pin-pulse"></div>
+            <div class="pin-core"></div>
+            <div class="pin-tooltip">🇨🇳 China — High-Capacity Production</div>
           </div>
         </div>
       </div>

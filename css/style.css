@@ -690,6 +690,12 @@ html[lang="ar"] .part-tag {
   overflow: hidden;
 }
 
+.map-inner {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
 .world-map-svg {
   width: 100%;
   height: auto;
@@ -712,6 +718,7 @@ html[lang="ar"] .part-tag {
   transform: translate(-50%, -50%);
   cursor: pointer;
   z-index: 10;
+  line-height: normal;
 }
 
 .pin-core {
@@ -756,6 +763,7 @@ html[lang="ar"] .part-tag {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   opacity: 0;
   transition: opacity var(--transition-apple), transform var(--transition-apple);
+  line-height: normal;
 }
 
 .map-pin-marker:hover .pin-tooltip {
@@ -764,12 +772,12 @@ html[lang="ar"] .part-tag {
 }
 
 /* Coordinates from Natural Earth conversion */
-.marker-egypt   { left: 58.7%; top: 36.8%; }
-.marker-dubai   { left: 65.3%; top: 40.8%; }
-.marker-germany { left: 52.9%; top: 22.8%; }
-.marker-india   { left: 71.9%; top: 44.0%; }
-.marker-italy   { left: 53.5%; top: 29.3%; }
-.marker-china   { left: 78.9%; top: 33.4%; }
+.marker-egypt   { left: 58.8%; top: 33.6%; }
+.marker-dubai   { left: 65.5%; top: 39.6%; }
+.marker-germany { left: 53.0%; top: 20.4%; }
+.marker-italy   { left: 53.5%; top: 27.6%; }
+.marker-india   { left: 71.8%; top: 44.4%; }
+.marker-china   { left: 84.0%; top: 33.6%; }
 
 /* ── COUNTRY/MARKET CARDS (like export template) ── */
 .market-badge-grid {

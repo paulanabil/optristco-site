@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting to About Us | Optrist Co</title>
+  <title>Redirecting to Products | Optrist Co</title>
   <script>
     (function() {
       var middleEastTZ = ['Africa/Cairo','Africa/Tripoli','Africa/Tunis','Africa/Algiers','Asia/Riyadh','Asia/Dubai','Asia/Baghdad','Asia/Kuwait','Asia/Qatar','Asia/Bahrain','Asia/Aden','Asia/Muscat','Asia/Amman','Asia/Beirut','Asia/Damascus','Asia/Jerusalem','Asia/Gaza','Asia/Hebron','Africa/Khartoum'];
@@ -11,15 +11,15 @@
       var lang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
       lang = lang.toLowerCase();
       if (middleEastTZ.indexOf(tz) !== -1 || lang.startsWith('ar')) {
-        window.location.replace('./ar/about.html');
+        window.location.replace('./ar/products.html');
       } else if (lang.startsWith('de')) {
-        window.location.replace('./de/about.html');
+        window.location.replace('./de/products.html');
       } else {
-        window.location.replace('./en/about.html');
+        window.location.replace('./en/products.html');
       }
     })();
   </script>
-  <meta http-equiv="refresh" content="0; url=./en/about.html">
+  <meta http-equiv="refresh" content="0; url=./en/products.html">
 </head>
 <body>
 </body>
