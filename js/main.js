@@ -1,13 +1,13 @@
 // ============================================================
 //  OPTRIST CO — OFFICIAL SCRIPTS
 //  Deutz Diesel Engine Spare Parts Specialist
-//  WhatsApp Support: +201223161181 | Email: optristco@icloud.com
+//  WhatsApp Support: +201006131346 | Email: optristco@icloud.com
 // ============================================================
 
 (function () {
   'use strict';
 
-  const WHATSAPP_NUMBER = '201223161181';
+  const WHATSAPP_NUMBER = '201006131346';
   const PRIMARY_EMAIL = 'optristco@icloud.com';
 
   /* ── 1. NAVBAR SCROLL EFFECT ── */
@@ -86,7 +86,7 @@
     counters.forEach(c => counterObserver.observe(c));
   }
 
-  /* ── 4. INSTANT PART INQUIRY BUTTONS (Direct to WhatsApp +201223161181) ── */
+  /* ── 4. INSTANT PART INQUIRY BUTTONS (Direct to WhatsApp +201006131346) ── */
   document.querySelectorAll('.btn-inquire-part').forEach(btn => {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
@@ -149,7 +149,7 @@
 
         titleHtml = '✅ تم استلام بيانات طلبكم بنجاح!';
         textHtml = 'جاري توجيهك لبريدك الإلكتروني، أو يمكنك الإرسال الفوري والمباشر لفريق المبيعات عبر واتساب:';
-        waBtnLabel = '💬 إرسال فوراً عبر واتساب (201223161181+)';
+        waBtnLabel = '💬 إرسال فوراً عبر واتساب (201006131346+)';
         mailBtnLabel = '✉️ فتح تطبيق البريد (optristco@icloud.com)';
       } else if (docLang === 'de') {
         subject = `Ersatzteilanfrage von ${name} [Deutz ${engine || ''}]`;
@@ -169,7 +169,7 @@
 
         titleHtml = '✅ Anfrage erfolgreich übermittelt!';
         textHtml = 'Ihr E-Mail-Programm wird aufgerufen. Alternativ können Sie Ihre Anfrage direkt per WhatsApp an unser Team senden:';
-        waBtnLabel = '💬 Direkt per WhatsApp senden (+201223161181)';
+        waBtnLabel = '💬 Direkt per WhatsApp senden (+201006131346)';
         mailBtnLabel = '✉️ E-Mail-Programm öffnen (optristco@icloud.com)';
       } else {
         subject = `Parts Inquiry from ${name} [Deutz ${engine || ''}]`;
@@ -189,7 +189,7 @@
 
         titleHtml = '✅ Inquiry Prepared Successfully!';
         textHtml = 'We are opening your email application. You can also send this inquiry directly to our sales desk via WhatsApp:';
-        waBtnLabel = '💬 Send via WhatsApp (+201223161181)';
+        waBtnLabel = '💬 Send via WhatsApp (+201006131346)';
         mailBtnLabel = '✉️ Open Email App (optristco@icloud.com)';
       }
 

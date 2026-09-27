@@ -772,12 +772,12 @@ html[lang="ar"] .part-tag {
 }
 
 /* Coordinates from Natural Earth conversion */
-.marker-egypt   { left: 58.8%; top: 33.6%; }
-.marker-dubai   { left: 65.5%; top: 39.6%; }
-.marker-germany { left: 53.0%; top: 20.4%; }
-.marker-italy   { left: 53.5%; top: 27.6%; }
-.marker-india   { left: 71.8%; top: 44.4%; }
-.marker-china   { left: 84.0%; top: 33.6%; }
+.marker-egypt   { left: 58.2%; top: 38.4%; }
+.marker-dubai   { left: 65.7%; top: 41.6%; }
+.marker-germany { left: 52.7%; top: 23.6%; }
+.marker-italy   { left: 53.4%; top: 30.0%; }
+.marker-india   { left: 72.0%; top: 47.0%; }
+.marker-china   { left: 84.8%; top: 35.6%; }
 
 /* ── COUNTRY/MARKET CARDS (like export template) ── */
 .market-badge-grid {
